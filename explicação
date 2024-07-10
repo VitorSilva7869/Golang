@@ -1,0 +1,3 @@
+--Roda o arquivo no Terminal
+go build .\nomeDoArquivo
+--Vai criar um arquivo .exe é so rodar
