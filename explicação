@@ -1,3 +1,20 @@
 --Roda o arquivo no Terminal
 go build .\nomeDoArquivo
 --Vai criar um arquivo .exe é so rodar
+.\primeiro.exe
+
+--Roda o arquivo no Terminal sem precisar abrir um arquivo
+go run .\nomeDoArquivo
+
+
+FMT é um pacote com diversas funçoes como 
+
+fmt.print("Imprimir")
+fmt.println("imprimir pulando uma linha")
+fmt.Scan("%", &) //Pegar valores para as variaveis
+
+--variaveis
+//criar variaveis
+nome := "Vitor"//Crio a variavel e dou valor a ela
+
+var nome String //Criando uma Var String
