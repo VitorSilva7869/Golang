@@ -1,0 +1,107 @@
+----Roda o arquivo no Terminal----
+go build .\nomeDoArquivo
+//Vai criar um arquivo .exe é so rodar--
+.\primeiro.exe
+
+----Roda o arquivo no Terminal sem precisar abrir um arquivo----
+go run .\nomeDoArquivo
+
+
+----FMT Funçoes----
+
+fmt.print("Imprimir")
+fmt.println("imprimir pulando uma linha")
+fmt.Scan("%", &) //Pegar valores para as variaveis
+
+----variaveis----
+//criar variaveis
+nome := "Vitor"//Crio a variavel e dou valor a ela
+
+var nome String //Criando uma Var String
+
+----Percentual %----
+
+--String--
+%c : Caracteres de impressão do valor Unicode. Por exemplo, fmt.Printf("%c", 65) resultaria em A.
+%s : Cadeia de caracteres (string). Por exemplo, fmt.Printf("%s", "hello") resultaria em hello.
+%q : Cadeia de caracteres entre aspas. Por exemplo, fmt.Printf("%q", "hello") resultaria em "hello".
+
+--Inteiro--
+%b : Representação binária. Por exemplo, fmt.Printf("%b", 5) resultaria em 101.
+%d : Base decimal (número inteiro). Por exemplo, fmt.Printf("%d", 123) resultaria em 123.
+%o : Base octal. Por exemplo, fmt.Printf("%o", 8) resultaria em 10.
+%x : Base hexadecimal, com letras minúsculas. Por exemplo, fmt.Printf("%x", 255) resultaria em ff.
+%X : Base hexadecimal, com letras maiúsculas. Por exemplo, fmt.Printf("%X", 255) resultaria em FF.
+%U : Valor Unicode com formato U+1234. Por exemplo, fmt.Printf("%U", 'A') resultaria em U+0041.
+
+--Float--
+%e : Notação científica com e minúsculo. Por exemplo, fmt.Printf("%e", 1234.5678) resultaria em 1.234568e+03.
+%E : Notação científica com E maiúsculo. Por exemplo, fmt.Printf("%E", 1234.5678) resultaria em 1.234568E+03.
+%f : Notação decimal padrão. Por exemplo, fmt.Printf("%f", 123.456) resultaria em 123.456000.
+%g : Usa %e ou %f com o formato mais compacto. Por exemplo, fmt.Printf("%g", 123.456) resultaria em 123.456.
+%G : Usa %E ou %f com o formato mais compacto. Por exemplo, fmt.Printf("%G", 123.456) resultaria em 123.456.
+
+--Boleano--
+%t : Representação booleana (true ou false). Por exemplo, fmt.Printf("%t", true) resultaria em true.
+
+--ponteiro--
+%p : Ponteiro em base hexadecimal. Por exemplo, fmt.Printf("%p", &a) poderia resultar em 0xc000010230.
+
+--geral--
+%v : Valor padrão do formato. Por exemplo, fmt.Printf("%v", "hello") resultaria em hello.
+%+v : Valor padrão do formato com os campos do nome da estrutura. Por exemplo, fmt.Printf("%+v", struct{ Name string }{"Alice"}) resultaria em {Name;Alice}.
+%#v : Representação Go do valor, ou seja, o formato que poderia ser usado para criar o valor. Por exemplo, fmt.Printf("%#v", struct{ Name string }{"Alice"}) resultaria em struct { Name string }{Name;"Alice"}.
+%T : Tipo do valor. Por exemplo, fmt.Printf("%T", 123) resultaria em int.
+%% : Um literal %. Por exemplo, fmt.Printf("%%") resultaria em %.
+
+
+
+
+
+
+
+
+----Jeson Estilo----
+// 1- Baixar Highlight
+// 2- Ctrl+Shift+P e digite "Preferences: Open Settings (JSON)`
+// 3- Estilo desse arquivo 
+{
+    "highlight.regexes": {
+        "(----(.*?)----)": {
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {
+                    "color": "#e5d335",
+                }
+            ]
+        },
+        "(-(.*?)--)": {
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {
+                    "color": "#6695bb",
+                }
+            ]
+        },
+        "%(.*?):": {
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {
+                    "color": "#939dd5",
+                    
+                }
+            ]
+        },
+        "(//(.*?)*)": {
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {
+                    "color": "#367d39",
+                    
+                }
+            ]
+        }
+    },
+    "files.autoSave": "afterDelay"
+}
+----Acabou----
