@@ -61,7 +61,11 @@ Operadores de comparação numérica (== != < <= > >=)
 Operador AND (&&)
 Operador OR (||)
 
+----lops----
 
+Em Go, o loop principal é o for. Diferente de algumas outras linguagens de programação,
+Go não possui uma estrutura de loop while ou do-while. Em vez disso, 
+você pode usar o for de várias maneiras para simular esses tipos de loops.
 
 
 
