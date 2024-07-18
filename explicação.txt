@@ -54,6 +54,14 @@ var nome String //Criando uma Var String
 %T : Tipo do valor. Por exemplo, fmt.Printf("%T", 123) resultaria em int.
 %% : Um literal %. Por exemplo, fmt.Printf("%%") resultaria em %.
 
+----Ordem de precedência entre operadores lógicos----
+
+Operador unário de negação (!)
+Operadores de comparação numérica (== != < <= > >=)
+Operador AND (&&)
+Operador OR (||)
+
+
 
 
 
