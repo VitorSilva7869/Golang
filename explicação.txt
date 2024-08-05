@@ -67,6 +67,23 @@ Em Go, o loop principal é o for. Diferente de algumas outras linguagens de prog
 Go não possui uma estrutura de loop while ou do-while. Em vez disso, 
 você pode usar o for de várias maneiras para simular esses tipos de loops.
 
+----Arrey----
+Arrays são estruturas de dados fixas que contêm elementos do mesmo tipo.
+O tamanho do array é definido na criação e não pode ser alterado.
+
+Tamanho: Tamanho fixo, definido na criação.
+Flexibilidade: Menos flexível, utilizado para casos onde o tamanho dos dados é conhecido e constante.
+Eficiência: Pode ser mais eficiente em termos de uso de memória quando o tamanho é fixo e pequeno.
+
+----Slices----
+Slices são abstrações de arrays que fornecem uma visão dinâmica sobre os dados.
+Eles são mais flexíveis que arrays, permitindo redimensionamento e outras operações avançadas.
+
+Tamanho: Tamanho dinâmico, pode crescer ou diminuir.
+Flexibilidade: Mais flexível, utilizado para casos onde o tamanho dos dados pode variar.
+Eficiência: Oferece mais operações e funcionalidades, como append, copy, etc.
+
+
 
 
 

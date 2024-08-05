@@ -3,54 +3,52 @@ package main
 import "fmt"
 
 func main() {
-	//Loop for básico	
-	for i := 0; i < 5; i++ {
-        fmt.Println(i)
-    }
-	//Loop for estilo while
-	i := 0
-    for i < 5 {
-        fmt.Println(i)
-        i++
-    }
-	//Loop for infinito
-    for {
-        fmt.Println(i)
-        i++
-        if i >= 5 {
-            break // Usamos 'break' para sair do loop
-        }
-    }
-	//Iterar sobre um array ou slice
-	numeros := []int{1, 2, 3, 4, 5}
+    //-----Array-------
+    //Definindo e Inicializando um Array
+    var arr1 [5]int // Array de inteiros com 5 elementos
+    arr2 := [3]string{"Go", "Python", "Java"} // Array de strings com 3 elementos
 
-    for index, value := range numeros {
-        fmt.Printf("Index: %d, Value: %d\n", index, value)
-    }
-	//Iterar sobre um mapa
-	capitals := map[string]string{
-        "France": "Paris",
-        "Italy":  "Rome",
-        "Japan":  "Tokyo",
-    }
+    fmt.Println(arr1) // Output: [0 0 0 0 0]
+    fmt.Println(arr2) // Output: [Go Python Java]
 
-    for country, capital := range capitals {
-        fmt.Printf("The capital of %s is %s\n", country, capital)
-    }
-	//Iterar sobre uma string
-	message := "Hello, World!"
+    //Acessando e Modificando Elementos de um Array
+    arr := [3]int{10, 20, 30}
+    fmt.Println(arr[0]) // Output: 10
 
-    for index, char := range message {
-        fmt.Printf("Index: %d, Character: %c\n", index, char)
-    }
-	//Uso de continue e break
-	for i := 0; i < 10; i++ {
-        if i%2 == 0 {
-            continue // Pula números pares
-        }
-        if i > 7 {
-            break // Sai do loop quando i for maior que 7
-        }
-        fmt.Println(i)
-    }
+    arr[1] = 40
+    fmt.Println(arr) // Output: [10 40 30]
+
+    //--------Slice---------
+
+    //Definindo e Inicializando um Slice
+    var slice1 []int // Slice de inteiros
+    slice2 := []string{"Go", "Python", "Java"} // Slice de strings
+
+    fmt.Println(slice1) // Output: []
+    fmt.Println(slice2) // Output: [Go Python Java]
+
+    //Criando um Slice a partir de um Array
+    arr4 := [5]int{10, 20, 30, 40, 50}
+    slice := arr4[1:4] // Cria um slice do índice 1 ao 3 (não inclui o 4)
+
+    fmt.Println(slice) // Output: [20 30 40]
+
+    //Modificando Elementos de um Slice
+    slice3 := []int{10, 20, 30}
+    slice3[1] = 40
+    fmt.Println(slice3) // Output: [10 40 30]
+
+    //append-- Adiciona elementos a um slice. Se necessário, aloca um novo array para acomodar os novos elementos.
+    slice5 := []int{10, 20, 30}
+    slice5 = append(slice5, 40, 50)
+    fmt.Println(slice5) // Output: [10 20 30 40 50]
+    
+    //len -- Retorna o comprimento (número de elementos) do slice.
+    slice4 := []int{10, 20, 30}
+    fmt.Println(len(slice4)) // Output: 3
+
+    //cap -- Retorna a capacidade do slice, ou seja, o número de elementos que o slice pode armazenar sem precisar de uma nova alocação.
+    slice6 := make([]int, 3, 5) // Cria um slice com comprimento 3 e capacidade 5
+    fmt.Println(cap(slice6))    // Output: 5
+
 }
